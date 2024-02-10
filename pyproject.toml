@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "python-boilerplate-project"
+version = "0.1.0"
+description = "A python boilerplate project using poetry"
+authors = ["Authors Name <authorsmail@>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0.0"
+pytest-cov = "^4.1.0"
+ruff = "^0.1.6"
+
+[tool.pytest.ini_options]
+testpaths = ["tests",]
+pythonpath = ["src",]
+
+[tool.coverage.run]
+branch = true
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.ruff]
+line-length = 120
+select = ["E", "F", "W", "I", "N", "S"]
+target-version = "py311"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,22 @@
+name: pull_request
+on: [pull_request]
+jobs:
+  run_tests_and_lint:
+    name: "Run Tests and Lint"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running build and test for ${{ github.ref }} branch"
+
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Installing the project
+        run: make docker/install
+
+      - name: Running Lint
+        run: make docker/lint
+
+      - name: Running tests
+        run: make docker/test

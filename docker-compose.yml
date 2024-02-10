@@ -1,0 +1,12 @@
+version: "3.4"
+services:
+  python-boilerplate-project:
+    tty: true
+    image: "python-boilerplate-project"
+    stdin_open: true
+    build:
+      context: .
+      target: "development"
+    volumes:
+      - ".:/src"
+    env_file: .env
