@@ -1,8 +1,8 @@
 version: "3.4"
 services:
-  python-boilerplate-project:
+  slack-bot-no-cpf:
     tty: true
-    image: "python-boilerplate-project"
+    image: "slack-bot-no-cpf"
     stdin_open: true
     build:
       context: .

@@ -4,8 +4,8 @@ ifneq (,$(wildcard ./.env))
     export
 endif
 
-APP_NAME="python-boilerplate-project"
-IMAGE_NAME="python-boilerplate-project"
+APP_NAME="slack-bot-no-cpf"
+IMAGE_NAME="slack-bot-no-cpf"
 VERSION="latest"
 
 ################################
@@ -16,11 +16,11 @@ local/install: generate-default-env-file
 	poetry install
 
 local/tests:
-	poetry run pytest -s --cov-report=html --cov-report=term --cov . 
+	poetry run pytest -s --cov-report=html --cov-report=term --cov .
 
 local/lint:
 	poetry run ruff check .
-	
+
 local/lint/fix:
 	poetry run ruff . --fix --exit-non-zero-on-fix
 

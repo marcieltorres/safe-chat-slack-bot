@@ -1,6 +1,6 @@
-# python-boilerplate-project
+# Slack Bot No CPF
 
-A python boilerplate project using poetry
+A simple slack bot that analyzes messages sent on channels and warns about possible sensitive data from someone, such as a social security number, for example.
 
 ## Technology and Resources
 
