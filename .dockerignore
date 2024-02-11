@@ -1,4 +1,5 @@
 .github
+.docs
 .vscode
 .pytest_cache
 .ruff_cache
