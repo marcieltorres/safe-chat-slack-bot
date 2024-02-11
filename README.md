@@ -9,19 +9,40 @@ A simple slack bot that analyzes messages sent on channels and warns about possi
 - [Docker Compose](https://docs.docker.com/compose/) - **pre-requisite**
 - [Poetry](https://python-poetry.org/) - **pre-requisite**
 - [Ruff](https://github.com/astral-sh/ruff)
+- [Slack Bolt](https://pypi.org/project/slack-bolt/)
 
 *Please pay attention on **pre-requisites** resources that you must install/configure.*
+
+## How to create and configure a new Slack Bot
+
+You can find the official docs [here](https://api.slack.com/start/building/bolt-python).
+
+This bot needs to have the following User Token Scopes added:
+```
+app_mentions:read
+channels:history
+channels:read
+chat:write
+im:history
+im:read
+```
+
+Follow this [guide](https://api.slack.com/tutorials/tracks/getting-a-token) to generate the tokens.
+
+## How bot works on slack workspace
+
+![Bot working](.docs/print_bot_working.png)
 
 ## How to install, run and test
 
 ### Environment variables
 
-*Use this section to explain each env variable available on your application*
-
 Variable | Description | Available Values | Default Value | Required
 --- | --- | --- | --- | ---
 ENV | The application enviroment | `dev / test / qa / prod` | `dev` | Yes
 PYTHONPATH | Provides guidance to the Python interpreter about where to find libraries and applications | [ref](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH) | `.` | Yes
+SLACK_BOT_TOKEN | The slack bot token | `a valid token` | `-` | Yes
+SLACK_APP_TOKEN | The slack app token | `a valid token` | `-` | Yes
 
 *Note: When you run the install command (using docker or locally), a .env file will be created automatically based on [env.template](env.template)*
 

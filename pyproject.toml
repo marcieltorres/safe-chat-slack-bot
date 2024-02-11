@@ -7,6 +7,8 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+slack-bolt = "1.18.1"
+aiohttp = "3.9.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.0.0"
@@ -19,7 +21,7 @@ pythonpath = ["src",]
 
 [tool.coverage.run]
 branch = true
-omit = ["*/tests/*"]
+omit = ["*/tests/*", "src/bot.py"]
 
 [tool.coverage.report]
 show_missing = true

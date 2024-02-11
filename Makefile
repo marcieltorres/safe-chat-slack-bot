@@ -7,6 +7,7 @@ endif
 APP_NAME="slack-bot-no-cpf"
 IMAGE_NAME="slack-bot-no-cpf"
 VERSION="latest"
+MAIN_ENTRYPOINT="src/bot.py"
 
 ################################
 # COMMANDS TO RUN LOCALLY
@@ -25,7 +26,7 @@ local/lint/fix:
 	poetry run ruff . --fix --exit-non-zero-on-fix
 
 local/run:
-	poetry run python src/main.py
+	poetry run python ${MAIN_ENTRYPOINT}
 
 ############################################
 # COMMANDS TO RUN USING DOCKER (RECOMMENDED)
@@ -50,7 +51,7 @@ docker/lint/fix:
 	docker-compose run ${APP_NAME} poetry run ruff . --fix --exit-non-zero-on-fix
 
 docker/run:
-	docker-compose run ${APP_NAME} poetry run python src/main.py
+	docker-compose run ${APP_NAME} poetry run python ${MAIN_ENTRYPOINT}
 
 ####################################
 # DOCKER IMAGE COMMANDS
