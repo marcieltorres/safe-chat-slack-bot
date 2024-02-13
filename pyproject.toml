@@ -32,8 +32,18 @@ directory = "htmlcov"
 
 [tool.ruff]
 line-length = 120
-select = ["E", "F", "W", "I", "N", "S"]
+indent-width = 4
 target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "S"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
