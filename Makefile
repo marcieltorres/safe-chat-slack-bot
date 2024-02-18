@@ -17,7 +17,7 @@ local/install: generate-default-env-file generate-mo-files
 	poetry install
 
 local/tests:
-	poetry run pytest -s --cov-report=html --cov-report=term --cov .
+	poetry run pytest -s --cov-report=html --cov-report xml:coverage.xml --cov-report=term --cov .
 
 local/lint:
 	poetry run ruff check .
