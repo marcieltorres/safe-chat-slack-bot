@@ -1,0 +1,5 @@
+msgid "Hello"
+msgstr "Hello"
+
+msgid "Do not send sensitive info"
+msgstr "please do not send social security number, email, phone number (or any other sensitive data) on public channels here through slack"

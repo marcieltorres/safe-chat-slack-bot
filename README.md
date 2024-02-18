@@ -2,6 +2,10 @@
 
 A simple slack bot that analyzes messages sent on channels and warns about possible sensitive data from someone, such as a social security number, for example.
 
+## How bot works on slack workspace
+
+![Bot working](.docs/print_bot_working.png)
+
 ## Technology and Resources
 
 - [Python 3.11](https://www.python.org/downloads/release/python-3110/) - **pre-requisite**
@@ -10,6 +14,9 @@ A simple slack bot that analyzes messages sent on channels and warns about possi
 - [Poetry](https://python-poetry.org/) - **pre-requisite**
 - [Ruff](https://github.com/astral-sh/ruff)
 - [Slack Bolt](https://pypi.org/project/slack-bolt/)
+- [i18n](https://docs.python.org/3/library/i18n.html)
+
+
 
 *Please pay attention on **pre-requisites** resources that you must install/configure.*
 
@@ -29,10 +36,6 @@ im:read
 
 Follow this [guide](https://api.slack.com/tutorials/tracks/getting-a-token) to generate the tokens.
 
-## How bot works on slack workspace
-
-![Bot working](.docs/print_bot_working.png)
-
 ## How to install, run and test
 
 ### Environment variables
@@ -41,6 +44,7 @@ Variable | Description | Available Values | Default Value | Required
 --- | --- | --- | --- | ---
 ENV | The application enviroment | `dev / test / qa / prod` | `dev` | Yes
 PYTHONPATH | Provides guidance to the Python interpreter about where to find libraries and applications | [ref](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH) | `.` | Yes
+LANGUAGE | The bot language | `en | pt_BR` | `pt_BR` | Yes
 SLACK_BOT_TOKEN | The slack bot token | `a valid token` | `-` | Yes
 SLACK_APP_TOKEN | The slack app token | `a valid token` | `-` | Yes
 
@@ -59,6 +63,29 @@ push image | `make docker/image/push` | - | to push the docker image
 **Helpful commands**
 
 *Please, check all available commands in the [Makefile](Makefile) for more information*.
+
+## Multi Language
+
+The Bot supports multiple languages using [i18n](https://docs.python.org/3/library/i18n.html) pattern.
+
+Locale file structure:
+```
+├─ src
+│  ├─ locales
+│  │  └─ en
+│  │      └─ LC_MESSAGES
+│  │          └─ base.po
+│  │  └─ pt_BR
+│  │      └─ LC_MESSAGES
+│  │          └─ base.po
+```
+
+### How to add a new language
+
+1) Create a new folder in `src/locales` with the new language;
+2) Create a new `base.po` file inside this folder (you just can copy from another language);
+3) Translate all the messages;
+4) Generate the `mo` files using the command `make generate-mo-files`
 
 ## Logging
 

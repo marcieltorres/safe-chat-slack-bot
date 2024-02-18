@@ -69,3 +69,7 @@ docker/image/push:
 
 generate-default-env-file:
 	@if [ ! -f .env ]; then cp env.template .env; fi;
+
+generate-mo-files:
+	msgfmt -o src/locales/en/LC_MESSAGES/base.mo src/locales/en/LC_MESSAGES/base.po
+	msgfmt -o src/locales/pt_BR/LC_MESSAGES/base.mo src/locales/pt_BR/LC_MESSAGES/base.po
