@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 1
 
       - name: msgfmt
-        run: msgfmt --help
+        run: apt-get install gettext
 
       - name: Installing the project
         run: make docker/install
