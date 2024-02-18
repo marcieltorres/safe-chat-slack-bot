@@ -1,4 +1,4 @@
-# Slack Bot No CPF
+# Slack Bot No CPF [![codecov](https://codecov.io/gh/marcieltorres/slack-bot-no-cpf/graph/badge.svg?token=V0T0I3SI3P)](https://codecov.io/gh/marcieltorres/slack-bot-no-cpf)
 
 A simple slack bot that analyzes messages sent on channels and warns about possible sensitive data from someone, such as a social security number, for example.
 
