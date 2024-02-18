@@ -1,0 +1,10 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: pt_BR\n"
+
+msgid "Hello"
+msgstr "Olá"
+
+msgid "Do not send sensitive info"
+msgstr "por favor não envie CPF, email, telefone (ou qualquer outro dado sensível) em canais públicos aqui pelo slack"

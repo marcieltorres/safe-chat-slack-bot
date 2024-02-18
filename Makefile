@@ -13,7 +13,7 @@ MAIN_ENTRYPOINT="src/bot.py"
 # COMMANDS TO RUN LOCALLY
 ################################
 
-local/install: generate-default-env-file
+local/install: generate-default-env-file generate-mo-files
 	poetry install
 
 local/tests:
@@ -32,7 +32,7 @@ local/run:
 # COMMANDS TO RUN USING DOCKER (RECOMMENDED)
 ############################################
 
-docker/install: generate-default-env-file
+docker/install: generate-default-env-file generate-mo-files
 	docker-compose build ${APP_NAME}
 
 docker/up:
@@ -69,3 +69,7 @@ docker/image/push:
 
 generate-default-env-file:
 	@if [ ! -f .env ]; then cp env.template .env; fi;
+
+generate-mo-files:
+	msgfmt -o src/locales/en/LC_MESSAGES/base.mo src/locales/en/LC_MESSAGES/base.po
+	msgfmt -o src/locales/pt_BR/LC_MESSAGES/base.mo src/locales/pt_BR/LC_MESSAGES/base.po
