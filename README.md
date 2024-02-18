@@ -44,7 +44,7 @@ Variable | Description | Available Values | Default Value | Required
 --- | --- | --- | --- | ---
 ENV | The application enviroment | `dev / test / qa / prod` | `dev` | Yes
 PYTHONPATH | Provides guidance to the Python interpreter about where to find libraries and applications | [ref](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH) | `.` | Yes
-LANGUAGE | The bot language | `en | pt_BR` | `pt_BR` | Yes
+LANGUAGE | The bot language | `en / pt_BR` | `pt_BR` | Yes
 SLACK_BOT_TOKEN | The slack bot token | `a valid token` | `-` | Yes
 SLACK_APP_TOKEN | The slack app token | `a valid token` | `-` | Yes
 
