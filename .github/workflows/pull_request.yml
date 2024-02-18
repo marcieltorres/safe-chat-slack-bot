@@ -12,6 +12,9 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: msgfmt
+        run: msgfmt --help
+
       - name: Installing the project
         run: make docker/install
 

@@ -71,6 +71,6 @@ generate-default-env-file:
 	@if [ ! -f .env ]; then cp env.template .env; fi;
 
 generate-mo-files:
- 	msgfmt --help
+
 	msgfmt -o ${GITHUB_WORKSPACE}/src/locales/en/LC_MESSAGES/base.mo ${GITHUB_WORKSPACE}/src/locales/en/LC_MESSAGES/base.po
 	msgfmt -o ${GITHUB_WORKSPACE}/src/locales/pt_BR/LC_MESSAGES/base.mo ${GITHUB_WORKSPACE}/src/locales/pt_BR/LC_MESSAGES/base.po
