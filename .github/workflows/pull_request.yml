@@ -23,3 +23,9 @@ jobs:
 
       - name: Running tests
         run: make docker/test
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        env:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: marcieltorres/slack-bot-no-cpf
