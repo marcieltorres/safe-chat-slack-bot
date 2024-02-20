@@ -1,6 +1,6 @@
-# Slack Bot No CPF [![codecov](https://codecov.io/gh/marcieltorres/slack-bot-no-cpf/graph/badge.svg?token=V0T0I3SI3P)](https://codecov.io/gh/marcieltorres/slack-bot-no-cpf)
+# SafeChat Slack Bot [![codecov](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot/graph/badge.svg?token=V0T0I3SI3P)](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot)
 
-A simple slack bot that analyzes messages sent on channels and warns about possible sensitive data from someone, such as a social security number, for example.
+The SafeChat is a simple slack bot that analyzes messages sent on channels and warns about possible sensitive data from someone, such as a social security number, for example.
 
 ## How bot works on slack workspace
 
@@ -15,7 +15,6 @@ A simple slack bot that analyzes messages sent on channels and warns about possi
 - [Ruff](https://github.com/astral-sh/ruff)
 - [Slack Bolt](https://pypi.org/project/slack-bolt/)
 - [i18n](https://docs.python.org/3/library/i18n.html)
-
 
 
 *Please pay attention on **pre-requisites** resources that you must install/configure.*

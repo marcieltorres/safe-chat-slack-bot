@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "slack-bot-no-cpf"
+name = "safe-chat-slack-bot"
 version = "0.1.0"
-description = "A python boilerplate project using poetry"
+description = "SafeChat is a simple slack bot that analyzes messages sent on channels and warns about possible sensitive data from someone, such as a social security number, for example"
 authors = ["Marciel Torres <marcielribeirotorres@gmail.com>"]
 license = "MIT"
 

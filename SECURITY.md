@@ -2,4 +2,4 @@
 
 ## Reporting a Vulnerability
 
-If you found a security bug, report it opening an [issue](https://github.com/marcieltorres/slack-bot-no-cpf/issues/new/choose) describing how to reproduce.
+If you found a security bug, report it opening an [issue](https://github.com/marcieltorres/safe-chat-slack-bot/issues/new/choose) describing how to reproduce.
