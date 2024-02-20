@@ -2,9 +2,32 @@
 
 The SafeChat is a simple slack bot that analyzes messages sent on channels and warns about possible sensitive data from someone, such as a social security number, for example.
 
-## How bot works on slack workspace
+## How SafeChat works
 
-![Bot working](.docs/print_bot_working.png)
+*The SafeChat must be a member to receive messages from a channel or dm.*
+
+### Portuguese version (pt-br)
+![Bot working pt-br](.docs/print_bot_working_in_pt_br_language.png)
+
+### English version
+![Bot working en](.docs/print_bot_working_in_en_language.png)
+
+## Installing on workspace
+
+### Create a Slack App using manifest.json file
+
+1. Open https://api.slack.com/apps/new and choose "From an app manifest"
+2. Choose the workspace you want to install the application to
+3. Copy the contents of manifest.json into the text box that says *Paste your manifest code here* (within the JSON tab) and click Next
+4. Review the configuration and click Create
+5. Click Install to Workspace and Allow on the screen that follows. You'll then be redirected to the App Configuration dashboard.
+
+### SLACK_BOT_TOKEN and SLACK_APP_TOKEN variables
+
+Before you can run the app, you'll need to store some environment variables.
+
+1. Open your apps configuration page from this list, click OAuth & Permissions in the left hand menu, then copy the Bot User OAuth Token. You will store this in your environment as SLACK_BOT_TOKEN.
+2. Click *Basic Information from the left hand menu and follow the steps in the App-Level Tokens section to create an app-level token with the connections:write scope. Copy this token. You will store this in your environment as SLACK_APP_TOKEN.
 
 ## Technology and Resources
 
@@ -16,24 +39,7 @@ The SafeChat is a simple slack bot that analyzes messages sent on channels and w
 - [Slack Bolt](https://pypi.org/project/slack-bolt/)
 - [i18n](https://docs.python.org/3/library/i18n.html)
 
-
 *Please pay attention on **pre-requisites** resources that you must install/configure.*
-
-## How to create and configure a new Slack Bot
-
-You can find the official docs [here](https://api.slack.com/start/building/bolt-python).
-
-This bot needs to have the following User Token Scopes added:
-```
-app_mentions:read
-channels:history
-channels:read
-chat:write
-im:history
-im:read
-```
-
-Follow this [guide](https://api.slack.com/tutorials/tracks/getting-a-token) to generate the tokens.
 
 ## How to install, run and test
 
