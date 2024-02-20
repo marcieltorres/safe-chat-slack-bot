@@ -1,6 +1,6 @@
 # SafeChat Slack Bot [![codecov](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot/graph/badge.svg?token=V0T0I3SI3P)](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot)
 
-The SafeChat is a simple slack bot that analyzes messages sent on channels and warns about possible sensitive data from someone, such as a social security number, for example.
+SafeChat Slack Bot is an open-source project designed to enhance data security within Slack workspaces. The bot's primary objective is to provide real-time alerts to users when sensitive information such as CPF (Brazilian taxpayer registry identification), email addresses, and other personally identifiable information (PII) are shared within Slack channels. SafeChat Slack Bot identifies and notifies users about potential data breaches, promoting a safer and more secure communication environment within Slack.
 
 ## How SafeChat works
 
