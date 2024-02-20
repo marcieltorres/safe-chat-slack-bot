@@ -1,8 +1,8 @@
 # Code of Conduct
 
-To be a truly great community, `slack-bot-no-cpf` needs to welcome developers from all walks of life, with different backgrounds, and with a wide range of experience. A diverse and friendly community will have more great ideas, more unique perspectives, and produce more great code. We will work diligently to make the `slack-bot-no-cpf` community welcoming to everyone.
+To be a truly great community, `safe-chat-slack-bot` needs to welcome developers from all walks of life, with different backgrounds, and with a wide range of experience. A diverse and friendly community will have more great ideas, more unique perspectives, and produce more great code. We will work diligently to make the `safe-chat-slack-bot` community welcoming to everyone.
 
-To give clarity of what is expected of our members, `slack-bot-no-cpf` has adopted the code of conduct defined by [contributor-covenant.org](https://www.contributor-covenant.org). This document is used across many open source communities, and we think it articulates our values well. The full text is copied below:
+To give clarity of what is expected of our members, `safe-chat-slack-bot` has adopted the code of conduct defined by [contributor-covenant.org](https://www.contributor-covenant.org). This document is used across many open source communities, and we think it articulates our values well. The full text is copied below:
 
 ### Contributor Code of Conduct v2.1
 

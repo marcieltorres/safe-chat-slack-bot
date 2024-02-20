@@ -1,8 +1,8 @@
 version: "3.4"
 services:
-  slack-bot-no-cpf:
+  safe-chat-slack-bot:
     tty: true
-    image: "slack-bot-no-cpf"
+    image: "safe-chat-slack-bot"
     stdin_open: true
     build:
       context: .

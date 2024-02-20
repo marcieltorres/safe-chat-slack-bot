@@ -4,8 +4,8 @@ ifneq (,$(wildcard ./.env))
     export
 endif
 
-APP_NAME="slack-bot-no-cpf"
-IMAGE_NAME="slack-bot-no-cpf"
+APP_NAME="safe-chat-slack-bot"
+IMAGE_NAME="safe-chat-slack-bot"
 VERSION="latest"
 MAIN_ENTRYPOINT="src/bot.py"
 
