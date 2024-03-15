@@ -34,6 +34,7 @@ O SafeChat Slack Bot é um projeto open source desenvolvido para aumentar a segu
 - [Python 3.11](https://www.python.org/downloads/release/python-3110/) - **pré-requisito**
 - [Docker](https://www.docker.com/get-started) - **pré-requisito**
 - [Docker Compose](https://docs.docker.com/compose/) - **pré-requisito**
+- [gettext - Serviço de internacionalização](https://docs.python.org/pt-br/3/library/gettext.html) - **pré-requisito**
 - [Poetry](https://python-poetry.org/) - **pré-requisito**
 - [Ruff](https://github.com/astral-sh/ruff)
 - [Slack Bolt](https://pypi.org/project/slack-bolt/)
@@ -86,7 +87,8 @@ Estrutura de arquivos e pastas:
 1) Crie um novo diretório em `src/locales` com o novo idioma;
 2) Cria um novo arquivo chamado `base.po` nesse novo diretóprio (você pode copiar a estrutura de outro idioma já suportado);
 3) Faça a tradução de todas as mensagens;
-4) Crie os arquivos `mo` usando o comando `make generate-mo-files`.
+4) Crie os arquivos `mo` usando o comando `make generate-mo-files`;
+5) Inclua o comando para gerar o arquivo .po no Dockerfile.
 
 ## Logging
 
