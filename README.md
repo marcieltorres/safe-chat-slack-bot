@@ -36,6 +36,7 @@ Before you can run the app, you'll need to store some environment variables.
 - [Python 3.11](https://www.python.org/downloads/release/python-3110/) - **pre-requisite**
 - [Docker](https://www.docker.com/get-started) - **pre-requisite**
 - [Docker Compose](https://docs.docker.com/compose/) - **pre-requisite**
+- [gettext - Multilingual internationalization services](https://docs.python.org/pt-br/3/library/gettext.html) - **pre-requisite**
 - [Poetry](https://python-poetry.org/) - **pre-requisite**
 - [Ruff](https://github.com/astral-sh/ruff)
 - [Slack Bolt](https://pypi.org/project/slack-bolt/)
@@ -92,7 +93,8 @@ Locale file structure:
 1) Create a new folder in `src/locales` with the new language;
 2) Create a new `base.po` file inside this folder (you just can copy from another language);
 3) Translate all the messages;
-4) Generate the `mo` files using the command `make generate-mo-files`
+4) Generate the `mo` files using the command `make generate-mo-files`;
+5) Include the command to generate po file on Dockerfile.
 
 ## Logging
 
