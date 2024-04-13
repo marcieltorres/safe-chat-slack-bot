@@ -1,14 +1,14 @@
 from asyncio import run as async_run
 from logging import getLogger
 from logging.config import fileConfig as logConfig
-from os import getenv
+from os import getenv, path
 
 from slack_bolt.adapter.socket_mode.async_handler import AsyncSocketModeHandler
 from slack_bolt.async_app import AsyncApp
 
 from src.listeners.register import register_listeners
 
-logConfig("./logging.conf", disable_existing_loggers=False)
+logConfig(path.join(path.dirname(path.abspath(__file__)), 'logging.conf'), disable_existing_loggers=False)
 logger = getLogger(__name__)
 
 SLACK_BOT_TOKEN = getenv("SLACK_BOT_TOKEN", "").strip()

@@ -23,3 +23,6 @@ COPY logging.conf src
 # Generating po file with translations
 RUN msgfmt -o src/locales/en/LC_MESSAGES/base.mo src/locales/en/LC_MESSAGES/base.po
 RUN msgfmt -o src/locales/pt_BR/LC_MESSAGES/base.mo src/locales/pt_BR/LC_MESSAGES/base.po
+
+# Starting the Bot
+CMD poetry run python src/bot.py
