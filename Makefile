@@ -1,3 +1,12 @@
+# verifying which docker compose command is available
+ifneq (, $(shell which docker-compose))
+    DOCKER_COMPOSE = docker-compose
+else ifneq (, $(shell which docker))
+    DOCKER_COMPOSE = docker compose
+else
+    $(error "Neither docker-compose nor docker compose is available")
+endif
+
 # loading and exporting all env vars from .env file automatically
 ifneq (,$(wildcard ./.env))
     include .env
@@ -33,25 +42,25 @@ local/run:
 ############################################
 
 docker/install: generate-default-env-file generate-mo-files
-	docker-compose build ${APP_NAME}
+	$(DOCKER_COMPOSE) build ${APP_NAME}
 
 docker/up:
-	docker-compose up -d
+	$(DOCKER_COMPOSE) up -d
 
 docker/down:
-	docker-compose down --remove-orphans
+	$(DOCKER_COMPOSE) down --remove-orphans
 
 docker/test:
-	docker-compose run ${APP_NAME} poetry run pytest --cov-report=html --cov-report xml:coverage.xml --cov-report=term --cov .
+	$(DOCKER_COMPOSE) run ${APP_NAME} poetry run pytest --cov-report=html --cov-report xml:coverage.xml --cov-report=term --cov .
 
 docker/lint:
-	docker-compose run ${APP_NAME} poetry run ruff check .
+	$(DOCKER_COMPOSE) run ${APP_NAME} poetry run ruff check .
 
 docker/lint/fix:
-	docker-compose run ${APP_NAME} poetry run ruff . --fix
+	$(DOCKER_COMPOSE) run ${APP_NAME} poetry run ruff . --fix
 
 docker/run:
-	docker-compose run ${APP_NAME} poetry run python ${MAIN_ENTRYPOINT}
+	$(DOCKER_COMPOSE) run ${APP_NAME} poetry run python ${MAIN_ENTRYPOINT}
 
 ####################################
 # DOCKER IMAGE COMMANDS
