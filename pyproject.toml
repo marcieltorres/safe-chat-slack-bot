@@ -13,7 +13,7 @@ aiohttp = "3.11.8"
 [tool.poetry.dev-dependencies]
 pytest = "^8.0.0"
 pytest-cov = "^6.0.0"
-ruff = "^0.7.3"
+ruff = "^0.8.1"
 
 [tool.pytest.ini_options]
 testpaths = ["tests",]
