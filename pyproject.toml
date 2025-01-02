@@ -7,7 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-slack-bolt = "1.21.2"
+slack-bolt = "1.22.0"
 aiohttp = "3.11.11"
 
 [tool.poetry.dev-dependencies]
