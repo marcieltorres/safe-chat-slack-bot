@@ -4,16 +4,17 @@ version = "0.1.0"
 description = "SafeChat Slack Bot is an open-source project designed to enhance data security within Slack workspaces"
 authors = ["Marciel Torres <marcielribeirotorres@gmail.com>"]
 license = "MIT"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
 slack-bolt = "1.22.0"
 aiohttp = "3.11.11"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
 pytest-cov = "^6.0.0"
-ruff = "^0.8.1"
+ruff = "^0.9.6"
 
 [tool.pytest.ini_options]
 testpaths = ["tests",]
