@@ -2,7 +2,7 @@ from re import Pattern as PatternCompiled
 from re import compile
 from typing import List
 
-from rules.constants import CPF_REGEX_PATTERN, EMAIL_REGEX_PATTERN
+from rules.constants import CPF_REGEX_PATTERN, EMAIL_REGEX_PATTERN, PHONE_REGEX_PATTERN
 
 
 class Pattern:
@@ -14,6 +14,7 @@ class Pattern:
         self.rules = []
         self.rules.append(CPF_REGEX_PATTERN)
         self.rules.append(EMAIL_REGEX_PATTERN)
+        self.rules.append(PHONE_REGEX_PATTERN)
         self.compile_all_rules()
 
     def compile_all_rules(self) -> PatternCompiled:
