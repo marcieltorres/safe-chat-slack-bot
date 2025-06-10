@@ -31,3 +31,12 @@ class PatternTest(TestCase):
             standard1 dummy text ever since the 1500s
         """
         self.assertEqual(self.pattern.find_all(random_text), 0)
+
+    def test_if_text_can_be_a_phone_with_success(self):
+        self.assertEqual(self.pattern.find_all("11999999999"), 1)
+
+    def test_if_text_can_be_a_phone_formatted_with_success(self):
+        self.assertEqual(self.pattern.find_all("(11) 99999-9999"), 1)
+
+    def test_if_text_can_be_a_phone_with_spaces(self):
+        self.assertEqual(self.pattern.find_all("11 99999 9999"), 1)
