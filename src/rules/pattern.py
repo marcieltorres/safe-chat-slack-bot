@@ -2,7 +2,7 @@ from re import Pattern as PatternCompiled
 from re import compile
 from typing import List
 
-from rules.constants import CPF_REGEX_PATTERN, EMAIL_REGEX_PATTERN, PHONE_REGEX_PATTERN
+from src.rules.constants import CPF_REGEX_PATTERN, EMAIL_REGEX_PATTERN, PHONE_REGEX_PATTERN
 
 
 class Pattern:
