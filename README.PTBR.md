@@ -90,11 +90,11 @@ Estrutura de arquivos e pastas:
 
 ### Como adicionar um novo idioma
 
-1) Crie um novo diretório em `src/locales` com o novo idioma;
-2) Cria um novo arquivo chamado `base.po` nesse novo diretóprio (você pode copiar a estrutura de outro idioma já suportado);
-3) Faça a tradução de todas as mensagens;
-4) Crie os arquivos `mo` usando o comando `make generate-mo-files`;
-5) Inclua o comando para gerar o arquivo .po no Dockerfile.
+1. Crie um novo diretório em `src/locales` com o novo idioma;
+2. Cria um novo arquivo chamado `base.po` nesse novo diretóprio (você pode copiar a estrutura de outro idioma já suportado);
+3. Faça a tradução de todas as mensagens;
+4. Crie os arquivos `mo` usando o comando `make generate-mo-files`;
+5. Inclua o comando para gerar o arquivo .po no Dockerfile.
 
 ## Logging
 
