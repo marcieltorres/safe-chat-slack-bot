@@ -1,4 +1,10 @@
-# SafeChat Slack Bot [![codecov](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot/graph/badge.svg?token=V0T0I3SI3P)](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot)
+# SafeChat Slack Bot
+
+[![GitHub stars](https://img.shields.io/github/stars/marcieltorres/safe-chat-slack-bot?style=social)](https://github.com/marcieltorres/safe-chat-slack-bot/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/marcieltorres/safe-chat-slack-bot?style=social)](https://github.com/marcieltorres/safe-chat-slack-bot/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/marcieltorres/safe-chat-slack-bot)](https://github.com/marcieltorres/safe-chat-slack-bot/issues)
+[![GitHub license](https://img.shields.io/github/license/marcieltorres/safe-chat-slack-bot)](https://github.com/marcieltorres/safe-chat-slack-bot/blob/main/LICENSE)
+[![codecov](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot/graph/badge.svg?token=V0T0I3SI3P)](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot)
 
 > [English](README.md) version.
 
@@ -97,3 +103,7 @@ Esse projeto usa uma maneira muito simples para configurar os logs com o arquivo
 ## Settings
 
 É possível gerenciar as configurações estáticas do projeto com o arquivo [settings.conf](settings.conf) através da [classe de configuração](./src/config/settings.py) com recursos do [ConfigParser](https://docs.python.org/3/library/configparser.html).
+
+---
+
+[![Fork me on GitHub](https://img.shields.io/badge/Fork%20me%20on-GitHub-brightgreen?style=for-the-badge&logo=github)](https://github.com/marcieltorres/safe-chat-slack-bot/fork)

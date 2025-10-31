@@ -1,4 +1,5 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
+# Uses _config.yml from the repository root for Jekyll configuration
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
