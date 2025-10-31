@@ -96,11 +96,11 @@ Locale file structure:
 
 ### How to add a new language
 
-1) Create a new folder in `src/locales` with the new language;
-2) Create a new `base.po` file inside this folder (you just can copy from another language);
-3) Translate all the messages;
-4) Generate the `mo` files using the command `make generate-mo-files`;
-5) Include the command to generate po file on Dockerfile.
+1. Create a new folder in `src/locales` with the new language;
+2. Create a new `base.po` file inside this folder (you just can copy from another language);
+3. Translate all the messages;
+4. Generate the `mo` files using the command `make generate-mo-files`;
+5. Include the command to generate po file on Dockerfile.
 
 ## Logging
 
