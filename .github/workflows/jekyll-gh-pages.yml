@@ -6,6 +6,10 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+  
+  # Runs on pull requests for testing
+  pull_request:
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,17 +40,29 @@ jobs:
         with:
           source: ./
           destination: ./_site
-      - name: Fix sitemap XML namespaces
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: ./artifact
+      - name: Extract and fix sitemap
         run: |
-          if [ -f ./_site/sitemap.xml ]; then
-            sed 's/ xmlns:xsi="[^"]*" xsi:schemaLocation="[^"]*"//g' ./_site/sitemap.xml > ./_site/sitemap_fixed.xml
-            mv ./_site/sitemap_fixed.xml ./_site/sitemap.xml
+          cd ./artifact
+          tar -xf artifact.tar
+          if [ -f sitemap.xml ]; then
+            sed 's/ xmlns:xsi="[^"]*" xsi:schemaLocation="[^"]*"//g' sitemap.xml > sitemap_fixed.xml
+            mv sitemap_fixed.xml sitemap.xml
+            tar -cf artifact.tar *
             echo "Sitemap XML namespaces cleaned"
           else
-            echo "No sitemap.xml found"
+            echo "No sitemap.xml found in artifact"
           fi
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Re-upload fixed artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ./artifact/artifact.tar
+          overwrite: true
 
   # Deployment job
   deploy:
