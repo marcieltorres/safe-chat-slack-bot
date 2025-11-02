@@ -40,16 +40,6 @@ jobs:
         with:
           source: ./
           destination: ./_site
-      - name: Fix sitemap XML namespaces
-        run: |
-          if [ -f ./_site/sitemap.xml ]; then
-            cp ./_site/sitemap.xml /tmp/sitemap_original.xml
-            sed 's/ xmlns:xsi="[^"]*" xsi:schemaLocation="[^"]*"//g' /tmp/sitemap_original.xml > /tmp/sitemap_fixed.xml
-            cp /tmp/sitemap_fixed.xml ./_site/sitemap.xml
-            echo "Sitemap XML namespaces cleaned"
-          else
-            echo "No sitemap.xml found"
-          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
