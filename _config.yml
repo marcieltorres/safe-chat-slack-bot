@@ -1,6 +1,8 @@
 # Jekyll configuration for GitHub Pages
-title: ""
-description: ""
+title: "SafeChat Slack Bot"
+description: "A secure Slack bot for safe chat communication with advanced safety features"
+url: "https://marcieltorres.github.io"
+baseurl: "/safe-chat-slack-bot"
 
 # Include hidden directories and files that start with dot
 include:
@@ -35,6 +37,7 @@ plugins:
   - jekyll-readme-index
   - jekyll-relative-links
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Remove theme to use basic styling
 # theme: minima
