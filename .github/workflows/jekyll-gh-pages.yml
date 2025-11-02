@@ -39,7 +39,8 @@ jobs:
       - name: Fix sitemap XML namespaces
         run: |
           if [ -f ./_site/sitemap.xml ]; then
-            sed -i 's/ xmlns:xsi="[^"]*" xsi:schemaLocation="[^"]*"//g' ./_site/sitemap.xml
+            sed 's/ xmlns:xsi="[^"]*" xsi:schemaLocation="[^"]*"//g' ./_site/sitemap.xml > ./_site/sitemap_fixed.xml
+            mv ./_site/sitemap_fixed.xml ./_site/sitemap.xml
             echo "Sitemap XML namespaces cleaned"
           else
             echo "No sitemap.xml found"
