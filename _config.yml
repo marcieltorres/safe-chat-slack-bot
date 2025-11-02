@@ -8,6 +8,7 @@ baseurl: "/safe-chat-slack-bot"
 include:
   - .docs
 
+
 # Exclude unnecessary files from the site
 exclude:
   - .github/
@@ -36,7 +37,6 @@ plugins:
   - jekyll-optional-front-matter
   - jekyll-readme-index
   - jekyll-relative-links
-  - jekyll-sitemap
   - jekyll-seo-tag
 
 # Remove theme to use basic styling
