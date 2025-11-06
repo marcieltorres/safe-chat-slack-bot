@@ -18,12 +18,15 @@ async def message_changed_callback(event, say):
         if event.get("subtype") == "message_changed" and "message" in event:
             edited_message = event["message"]
             text = edited_message.get("text", "")
-            
+
             # Check if the edited message contains sensitive data
             if pattern.find_all(text) > 0:
                 user = edited_message.get("user")
                 if user:
-                    warning_text = f'{language.translate("Hello")} <@{user}>, {language.translate("Do not send sensitive info")}'
+                    warning_text = (
+                        f'{language.translate("Hello")} <@{user}>, '
+                        f'{language.translate("Do not send sensitive info")}'
+                    )
                     await say(text=warning_text, thread_ts=edited_message.get("ts"))
     except Exception as e:
         logger.error(e)
