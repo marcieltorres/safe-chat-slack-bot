@@ -1,0 +1,51 @@
+# Jekyll configuration for GitHub Pages
+title: "SafeChat Slack Bot"
+description: "A secure Slack bot for safe chat communication with advanced safety features"
+url: "https://marcieltorres.github.io"
+baseurl: "/safe-chat-slack-bot"
+
+# Include hidden directories and files that start with dot
+include:
+  - .docs
+
+
+# Exclude unnecessary files from the site
+exclude:
+  - .github/
+  - .vscode/
+  - htmlcov/
+  - src/
+  - tests/
+  - Dockerfile
+  - docker-compose.yml
+  - Makefile
+  - pyproject.toml
+  - poetry.lock
+  - requirements.txt
+  - logging.conf
+  - settings.conf
+  - env.template
+  - manifest.json
+  - "*.log"
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Minimal plugin settings - remove extras that add unwanted elements
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-seo-tag
+
+# Remove theme to use basic styling
+# theme: minima
+
+# Enable relative links processing
+relative_links:
+  enabled: true
+  collections: false
+
+# Disable extra elements
+show_excerpts: false

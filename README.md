@@ -1,4 +1,10 @@
-# SafeChat Slack Bot [![codecov](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot/graph/badge.svg?token=V0T0I3SI3P)](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot)
+# SafeChat Slack Bot
+
+[![GitHub stars](https://img.shields.io/github/stars/marcieltorres/safe-chat-slack-bot?style=social)](https://github.com/marcieltorres/safe-chat-slack-bot/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/marcieltorres/safe-chat-slack-bot?style=social)](https://github.com/marcieltorres/safe-chat-slack-bot/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/marcieltorres/safe-chat-slack-bot)](https://github.com/marcieltorres/safe-chat-slack-bot/issues)
+[![GitHub license](https://img.shields.io/github/license/marcieltorres/safe-chat-slack-bot)](https://github.com/marcieltorres/safe-chat-slack-bot/blob/main/LICENSE)
+[![codecov](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot/graph/badge.svg?token=V0T0I3SI3P)](https://codecov.io/gh/marcieltorres/safe-chat-slack-bot)
 
 > Readme em [Português - PTBR](README.PTBR.md).
 
@@ -90,11 +96,11 @@ Locale file structure:
 
 ### How to add a new language
 
-1) Create a new folder in `src/locales` with the new language;
-2) Create a new `base.po` file inside this folder (you just can copy from another language);
-3) Translate all the messages;
-4) Generate the `mo` files using the command `make generate-mo-files`;
-5) Include the command to generate po file on Dockerfile.
+1. Create a new folder in `src/locales` with the new language;
+2. Create a new `base.po` file inside this folder (you just can copy from another language);
+3. Translate all the messages;
+4. Generate the `mo` files using the command `make generate-mo-files`;
+5. Include the command to generate po file on Dockerfile.
 
 ## Logging
 
@@ -103,3 +109,7 @@ This project uses a simple way to configure the log with [logging.conf](logging.
 ## Settings
 
 This project uses a simple way to manage the settings with [settings.conf](settings.conf) and [ConfigParser](https://docs.python.org/3/library/configparser.html) using a [config class](./src/config/settings.py).
+
+---
+
+[![Fork me on GitHub](https://img.shields.io/badge/Fork%20me%20on-GitHub-brightgreen?style=for-the-badge&logo=github)](https://github.com/marcieltorres/safe-chat-slack-bot/fork)
