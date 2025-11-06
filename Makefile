@@ -32,7 +32,7 @@ local/lint:
 	poetry run ruff check .
 
 local/lint/fix:
-	poetry run ruff . --fix
+	poetry run ruff check . --fix
 
 local/run:
 	poetry run python ${MAIN_ENTRYPOINT}
