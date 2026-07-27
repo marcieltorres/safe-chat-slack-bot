@@ -78,6 +78,8 @@ push image | `make docker/image/push` | - | to push the docker image
 
 *Please, check all available commands in the [Makefile](Makefile) for more information*.
 
+*AI coding agents: see [AGENTS.md](AGENTS.md) for agent-specific guidance.*
+
 ## Multi Language
 
 The Bot supports multiple languages using [i18n](https://docs.python.org/3/library/i18n.html) pattern.

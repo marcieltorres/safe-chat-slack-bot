@@ -44,3 +44,9 @@ F | [pyflakes](https://pypi.org/project/pyflakes/)
 I | [isort](https://pypi.org/project/isort/)
 N | [pep8-naming](https://pypi.org/project/pep8-naming/)
 S | [flake8-bandit](https://pypi.org/project/flake8-bandit/)
+
+# AI Coding Agents
+
+If you use an AI coding agent (Claude Code, Cursor, Copilot, Codex and friends) to contribute, point it at [AGENTS.md](AGENTS.md). It follows the [agents.md](https://agents.md/) convention and covers setup, commands, code style, testing conventions, commit format and the security rules that apply to this bot — it handles Slack tokens and PII, so those rules are not optional.
+
+You are still responsible for everything you submit: read the diff, run `make local/lint` and `make local/tests`, and make sure the pull request describes the change in your own words.
