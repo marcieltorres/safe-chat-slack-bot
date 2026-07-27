@@ -72,6 +72,8 @@ run | `make docker/run` | `make local/run` | Para rodar a aplicação
 
 *Confira todos os comandos disponíveis no arquivo [Makefile](Makefile)*.
 
+*Agentes de IA: veja [AGENTS.md](AGENTS.md) para orientações específicas.*
+
 ## Múltiplos Idioma
 
 O Bot consegue interagir com outros idiomas além do Português utilizando o padrão [i18n](https://docs.python.org/3/library/i18n.html).
