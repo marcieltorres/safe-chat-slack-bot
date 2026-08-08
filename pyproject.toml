@@ -23,7 +23,7 @@ pythonpath = ["src",]
 
 [tool.coverage.run]
 branch = true
-omit = ["*/tests/*", "src/bot.py"]
+omit = ["*/tests/*"]
 
 [tool.coverage.report]
 show_missing = true
