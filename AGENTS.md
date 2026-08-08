@@ -99,6 +99,22 @@ User-facing strings must go through `language.translate("...")`. Add the msgid t
   Reference it with `closes #NN`.
 - Make sure lint and tests pass locally before opening the PR.
 
+## Releases
+
+The tag and the GitHub Release are created automatically by
+[`.github/workflows/release.yml`](.github/workflows/release.yml) when a version without a tag lands
+on `main`. [CONTRIBUTING.md](CONTRIBUTING.md) has the full process.
+
+- **Never create a tag or a GitHub Release by hand** — the workflow owns both.
+- Tags are plain `X.Y.Z`, without a `v` prefix, always derived from `tool.poetry.version` in
+  [pyproject.toml](pyproject.toml).
+- A PR that changes the bot's behaviour must bump `version` in `pyproject.toml` **and** add the
+  matching `## [X.Y.Z] - YYYY-MM-DD` section to [CHANGELOG.md](CHANGELOG.md). Without both, the
+  release never fires.
+- A PR that only touches dependencies, docs or CI does not bump the version.
+- The release notes are the changelog section verbatim, so the section must not be empty — the
+  workflow fails loudly if it is missing or blank.
+
 ## Security
 
 This bot handles credentials and PII by definition. Treat these as hard rules:
