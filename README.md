@@ -1,6 +1,6 @@
 # SafeChat Slack Bot
 
-[![release](https://img.shields.io/github/v/release/marcieltorres/safe-chat-slack-bot)](https://github.com/marcieltorres/safe-chat-slack-bot/blob/main/CHANGELOG.md)
+[![release](https://img.shields.io/github/v/release/marcieltorres/safe-chat-slack-bot)][changelog]
 [![GitHub stars](https://img.shields.io/github/stars/marcieltorres/safe-chat-slack-bot?style=social)](https://github.com/marcieltorres/safe-chat-slack-bot/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/marcieltorres/safe-chat-slack-bot?style=social)](https://github.com/marcieltorres/safe-chat-slack-bot/network/members)
 [![GitHub issues](https://img.shields.io/github/issues/marcieltorres/safe-chat-slack-bot)](https://github.com/marcieltorres/safe-chat-slack-bot/issues)
@@ -116,3 +116,5 @@ This project uses a simple way to manage the settings with [settings.conf](setti
 ---
 
 [![Fork me on GitHub](https://img.shields.io/badge/Fork%20me%20on-GitHub-brightgreen?style=for-the-badge&logo=github)](https://github.com/marcieltorres/safe-chat-slack-bot/fork)
+
+[changelog]: CHANGELOG.md
