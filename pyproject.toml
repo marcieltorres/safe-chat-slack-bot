@@ -19,11 +19,11 @@ ruff = ">=0.15.4,<0.17.0"
 
 [tool.pytest.ini_options]
 testpaths = ["tests",]
-pythonpath = ["src",]
+pythonpath = [".",]
 
 [tool.coverage.run]
 branch = true
-omit = ["*/tests/*", "src/bot.py"]
+omit = ["*/tests/*"]
 
 [tool.coverage.report]
 show_missing = true
