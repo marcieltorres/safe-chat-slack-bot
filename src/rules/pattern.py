@@ -1,6 +1,5 @@
 from re import Pattern as PatternCompiled
-from re import compile
-from re import fullmatch
+from re import compile, fullmatch
 from typing import List
 
 from src.rules.constants import CPF_REGEX_PATTERN, EMAIL_REGEX_PATTERN, PHONE_REGEX_PATTERN
