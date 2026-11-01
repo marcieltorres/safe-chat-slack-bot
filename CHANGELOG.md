@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-01
+
+### Fixed
+
+- CPF-shaped sequences with invalid check digits or repeated digits no longer trigger a sensitive-data reply. A CPF-shaped match that is also a valid phone number still counts.
+
 ## [0.1.0] - 2026-08-08
 
 ### Added
@@ -16,5 +22,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for edited messages (`message_changed` subtype).
 - Internationalization via gettext (`en`, `pt_BR`).
 
-[Unreleased]: https://github.com/marcieltorres/safe-chat-slack-bot/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/marcieltorres/safe-chat-slack-bot/compare/0.1.1...HEAD
+[0.1.1]: https://github.com/marcieltorres/safe-chat-slack-bot/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/marcieltorres/safe-chat-slack-bot/releases/tag/0.1.0
