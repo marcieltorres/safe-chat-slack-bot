@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "safe-chat-slack-bot"
-version = "0.1.0"
+version = "0.1.1"
 description = "SafeChat Slack Bot is an open-source project designed to enhance data security within Slack workspaces"
 authors = ["Marciel Torres <marcielribeirotorres@gmail.com>"]
 license = "MIT"
