@@ -11,7 +11,7 @@ from src.listeners.register import register_listeners
 
 # Obviously fake values: no real credential, workspace or person is referenced here.
 FAKE_ENVIRONMENT = {"SLACK_BOT_TOKEN": "xoxb-not-a-real-bot-credential"}
-FAKE_CPF = '000.000.000-00'
+FAKE_CPF = '111.444.777-35'
 BOT_USER_ID = 'U000BOT'
 CHANNEL_ID = 'C000000'
 USER_ID = 'U000000'
